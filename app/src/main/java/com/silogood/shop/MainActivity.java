@@ -33,12 +33,16 @@ public class MainActivity extends AppCompatActivity {
         DatabaseHelper databaseHelper = new DatabaseHelper(this);
 
         //insert test
-        databaseHelper.setInsertNote("clothes","shot_shirt_1", "11", 1);
-        databaseHelper.setInsertNote("clothes","shot_shirt_2", "12", 1);
-        databaseHelper.setInsertNote("shoes","shoes_1", "21", 4);
-        databaseHelper.setInsertNote("shoes","shoes_2", "22", 3);
-        databaseHelper.setInsertNote("acc","acc_1", "31", 5);
-        databaseHelper.setInsertNote("acc","acc_2", "32", 6);
+        databaseHelper.setInsertNote("clothes","지방시 후드", "1", 10);
+        databaseHelper.setInsertNote("clothes","버버리 후드", "2", 10);
+        databaseHelper.setInsertNote("clothes","코트 1", "3", 10);
+        databaseHelper.setInsertNote("clothes","코트 2", "4", 10);
+        databaseHelper.setInsertNote("clothes","코트 3", "5", 11);
+        databaseHelper.setInsertNote("clothes","발망 티 ", "6", 10);
+        databaseHelper.setInsertNote("shoes","구찌 스니커즈", "7", 10);
+        databaseHelper.setInsertNote("shoes","커먼 프로젝트 스니커즈", "8", 20);
+        databaseHelper.setInsertNote("acc","스냅 백", "9", 20);
+        databaseHelper.setInsertNote("acc","크로스 백", "10", 20);
 
         //get db
        /* databaseHelper.getAccNode(1);

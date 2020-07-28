@@ -40,30 +40,19 @@ public class AccNote {
     public int getId() {
         return id;
     }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getTimestamp() {
-        return timestamp;
-    }
+    public String getName() { return name; }
+    public String getCode(){ return code; }
+    public int getBqt(){ return bqt; }
+    public String getTimestamp() { return timestamp; }
 
     public void setId(int id) {
         this.id = id;
     }
-
-    public void setCode(String code) {
-        this.code = code;
-    }
+    public void setCode(String code) { this.code = code; }
+    public void setName(String name){ this.name = name; }
     public void setBqt(int bqt) {
         this.bqt = bqt;
     }
-
     public void setTimestamp(String timestamp) {
         this.timestamp = timestamp;
     }

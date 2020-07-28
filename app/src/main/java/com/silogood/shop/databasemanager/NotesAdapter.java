@@ -70,9 +70,9 @@ public class NotesAdapter extends BaseAdapter {
         }
 
         viewHolder.icon.setBackgroundResource(R.drawable.shirt);
-        viewHolder.name.setText(mItemList.get(position).getName());
-        viewHolder.code.setText(mItemList.get(position).getCode());
-        viewHolder.bqt.setText(String.valueOf(mItemList.get(position).getBqt()));
+        viewHolder.name.setText("상품 : "+mItemList.get(position).getName());
+        viewHolder.code.setText("코드 : "+ mItemList.get(position).getCode());
+        viewHolder.bqt.setText("수량 : "+ String.valueOf(mItemList.get(position).getBqt()));
         viewHolder.timestamp.setText(mItemList.get(position).getTimestamp());
 
         return convertView;

@@ -64,9 +64,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         long id = 0;
         if( type == CLOTHES ){
-            Log.d(TAG,"#####SILOGOOD name : "+ name);
-            Log.d(TAG,"#####SILOGOOD code : "+ code);
-            Log.d(TAG,"#####SILOGOOD bqt : "+ bqt);
             values.put(ClothesNote.COLUMN_NAME, name);
             values.put(ClothesNote.COLUMN_CODE, code);
             values.put(ClothesNote.COLUMN_BQT, bqt);
@@ -97,7 +94,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
         if (cursor != null) {
-            Log.d(TAG,"##### SILOGOOD moveToFirst!!!");
             cursor.moveToFirst();
         }
 

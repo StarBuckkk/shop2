@@ -22,12 +22,18 @@ public class Admin_Clothes extends AppCompatActivity {
 
     private ListView mListView;
     private TextView mTextView;
-    private Context mContext;
     private String TAG = "Admin_Clothes";
+    private DatabaseHelper mDatabaseHelper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_clothes);
+        mDatabaseHelper= new DatabaseHelper(this);
+       init_view();
+
+    }
+
+    private void init_view(){
 
         mListView = (ListView)findViewById(R.id.listview);
         mTextView = (TextView)findViewById(R.id.selected_item_textview);
@@ -36,7 +42,6 @@ public class Admin_Clothes extends AppCompatActivity {
 
         NotesAdapter adapter1 = new NotesAdapter(this,R.layout.custom_listview_item,list1);
 
-        //mListView.setAdapter(adapter);
         mListView.setAdapter(adapter1);
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
@@ -47,17 +52,21 @@ public class Admin_Clothes extends AppCompatActivity {
                 ClothesNote selected_item = (ClothesNote)adapterView.getItemAtPosition(position);
 
                 mTextView.setText(selected_item.getName());
+                ClothesNote cn = new ClothesNote(selected_item.getId(),selected_item.getName(),selected_item.getCode(),selected_item.getBqt()-1,selected_item.getTimestamp());
+                mDatabaseHelper.updateClothesNote(cn);
+
             }
         });
 
-        DatabaseHelper databaseHelper = new DatabaseHelper(this);
-        int i = databaseHelper.getClothesNotesCount();
-        long a ;
-        for( a = 1 ; a < i ; a++ ){
-            ClothesNote admin_clothes = databaseHelper.getClothesNote(a);
+
+
+        int i = mDatabaseHelper.getClothesNotesCount();
+        long index ;
+        for( index = 1 ; index < i ; index++ ){
+            ClothesNote admin_clothes = mDatabaseHelper.getClothesNote(index);
             list1.add(admin_clothes);
 
-         }
+        }
     }
 
 }

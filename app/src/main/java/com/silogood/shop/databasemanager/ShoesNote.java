@@ -40,30 +40,23 @@ public class ShoesNote {
     public int getId() {
         return id;
     }
-
-    public String getName() {
-        return name;
-    }
+    public String getName() { return name; }
+    public String getCode(){ return code; }
+    public int getBqt(){ return bqt; }
+    public String getTimestamp() { return timestamp; }
 
     public void setName(String name) {
         this.name = name;
     }
-
     public void setCode(String code) {
         this.code = code;
     }
     public void setBqt(int bqt) {
         this.bqt = bqt;
     }
-
-    public String getTimestamp() {
-        return timestamp;
-    }
-
     public void setId(int id) {
         this.id = id;
     }
-
     public void setTimestamp(String timestamp) {
         this.timestamp = timestamp;
     }
