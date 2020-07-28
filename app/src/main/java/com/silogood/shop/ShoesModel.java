@@ -24,6 +24,7 @@ public class ShoesModel implements Serializable, Comparable<ShoesModel>{
 		this.name = name;
 		this.code = code;
 		this.qt = qt;
+		//ll
 	}
 
 	public int getQt() {
