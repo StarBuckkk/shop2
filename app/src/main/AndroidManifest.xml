@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ItemViewByAdmin"></activity>
         <activity android:name=".admin.admin_shoes.Admin_Shoes"></activity>
         <activity android:name=".admin.admin_clothes.Admin_Clothes" />
         <activity android:name=".admin.admin_acc.Admin_Acc" />

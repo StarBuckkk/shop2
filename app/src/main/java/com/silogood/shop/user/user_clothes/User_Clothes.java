@@ -6,7 +6,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListAdapter;
+import android.widget.ListView;
 
 import com.silogood.shop.ItemViewByUser;
 import com.silogood.shop.R;
@@ -16,12 +19,20 @@ public class User_Clothes extends AppCompatActivity {
     private Button UserClothesOrderBtn;
     private String TAG = "StarBuck_MAINACTIVITY4";
 
+    private ListView mListView;
+    private ListAdapter mListAdapter;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_clothes);
         init_view();
+
+
     }
+
+
 
     private void init_view() {
         UserClothesOrderBtn = (Button) findViewById(R.id.user_cloth_order_btn);
