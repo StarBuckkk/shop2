@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mContext = MainActivity.this;
 
+        //log
         init_view();
 
         DatabaseHelper databaseHelper = new DatabaseHelper(this);
